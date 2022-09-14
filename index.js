@@ -10,7 +10,6 @@ const Intern = require('./lib/Intern');
 const createSite = require('./src/genHTML');
 
 //Q: Why did this get added & where/when would it have been added?
-const { choices } = require('yargs');
 const genHTML = require('./src/genHTML');
 
 
