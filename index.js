@@ -6,39 +6,64 @@ const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+//HTML Site Creation 
+const createSite = require('./src/genHTML');
+const { choices } = require('yargs');
+
 
 //teamMembers
 let teamArray = [];
 
+//there MUST be a Manager before any other employee's can be added
 function init() {
     inquirer.prompt([
-        {},
-        {},
-        {},
-        {}
+        {
+            type: 'input',
+            name: 'name',
+            message: "Please enter manager's name:"
+        },
+        {
+            type: 'input',
+            name: 'employee ID',
+            message: 'What is your employee ID:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address:'
+        },
+        {
+            type: 'list',
+            name: 'role',
+            message: 'What is your office number:'
+        }
     ]).then(answers => {
         const manager = new Manager(answers.name, email, phone)
-        switch(answers.role){
-            case "Engineer":
-                addEngineer()
-                break;
-            case "no":
-                generateHTML()
-                break;
-        }
+        teamArray.push(manager);
+        //Once the Manager info is enter the team needs to be built with Engineers/Interns
+        teamMenu();
     })
-}
+};
 
-function addEngineer() {
+//Menu in terminal asking if an Engineer or Intern needs to be added OR if the team is complete
+function teamMenu() {
     inquirer.prompt([
-        {},
-        {},
-        {},
-        {}
-    ]).then(answers => {
-        const engineer = new Engineer(answers.name, email, phone)
-        switch(answers.role){
-
+        {
+            type: 'list',
+            name: 'menu',
+            message: 'Please choose one of the following options:',
+            choices: ['Add Engineer', 'Add Intern', 'My Team is Complete!']
         }
-    })
-}
+    ]).then(answers => {
+        switch(answers.menu){
+            case "Add Engineer":
+                addEngineer();
+                break;
+            case "Add Intern":
+                addIntern();
+                break;
+            default:
+                createTeam();
+        }
+    });
+};
