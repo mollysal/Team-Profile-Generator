@@ -1,3 +1,4 @@
+//Need to bring in Manager class
 const Manager = require('../lib/manager');
 //setting up example manager info
 const manager = new Manager('Josh', '123456', 'josh@gmail.com', '678');

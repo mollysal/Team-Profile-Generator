@@ -1,3 +1,4 @@
+//Need to bring in Engineer class
 const Engineer = require('../lib/engineer');
 //setting up example engineer info
 const engineer = new Engineer('Josh', '123456', 'josh@gmail.com', 'josh123');

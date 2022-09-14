@@ -1,9 +1,9 @@
-//Crate a team function
+//Crate a team function (Manager, Engineer & Intern all generated within the createTeam Function)
 const createTeam = (team) => {
     console.log(team);
-    //in order to push - need an empty array
+    //in order to push - need an empty array (Results array eventually needs to be joined for each team member added.)
     const results = [];
-//Generate the Manager & add Manager Card
+//Generate the Manager & add Manager Card with HTML within the template literals
     const createManager = manager => {
         console.log(manager);
         let managerHTML = `
@@ -83,9 +83,11 @@ const createTeam = (team) => {
             createIntern(team[i]);
         }
     }
-
+    //All items pushed into Results Array now need to be joined
     return results.join('');
 }
+//END of createTeam Function 
+
 //Put the team into a base HTML (Under Jumbotron <main> area)
 module.exports = team => {
     return `

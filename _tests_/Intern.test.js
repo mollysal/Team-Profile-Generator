@@ -1,3 +1,4 @@
+//Need to bring in Intern class
 const Intern = require('../lib/intern');
 //setting up example intern info
 const intern = new Intern('Josh', '123456', 'josh@gmail.com', 'PSU');

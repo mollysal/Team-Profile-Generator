@@ -1,3 +1,4 @@
+//Need to bring in Employee class
 const Employee = require('../lib/Employee');
 //setting up example employee info
 const employee = new Employee('Josh', '123456', 'josh@gmail.com');

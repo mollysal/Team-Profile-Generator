@@ -8,11 +8,13 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 //HTML Site Creation 
 const createSite = require('./src/genHTML');
+
+//Q: Why did this get added & where/when would it have been added?
 const { choices } = require('yargs');
 const genHTML = require('./src/genHTML');
 
 
-//teamMembers
+//team members array (need to push the info into an array & array needs to be brought into the genHTML.js file)
 let teamArray = [];
 
 //TO DO: Add a validation for email - must include '@' symbol
@@ -66,6 +68,7 @@ function teamMenu() {
                 addIntern();
                 break;
             default:
+                //if no other members of team need to be added - the team needs to be generated & the file needs to be written
                 createTeam();
         }
     });
@@ -134,6 +137,7 @@ function addIntern() {
 
 //Once the team is complete createTeam function needs to be run
 function createTeam() {
+    //file needs to be written to the dist folder
     fs.writeFile('./dist/index.html', genHTML(teamArray), (err) => {
         if (err)
         console.log(err);
@@ -142,5 +146,5 @@ function createTeam() {
         }
     });
 }
-
+//start the application 
 init();
