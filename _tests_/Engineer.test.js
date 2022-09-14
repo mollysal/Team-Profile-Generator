@@ -17,7 +17,7 @@ test('Check to see if we can retrieve the ID from getId Method', () => {
     expect(engineer.getID()).toBe('123456');
 })
 test('Check to see if we can retrieve the email from getEmail Method', () => {
-    expect(engineer.getEmail()).toBe('josh@gamil.com');
+    expect(engineer.getEmail()).toBe('josh@gmail.com');
 })
 test('Check to see if we can retrieve the github Username from getGitHub Method', () => {
     expect(engineer.getGithub()).toBe('josh123');

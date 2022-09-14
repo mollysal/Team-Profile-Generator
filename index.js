@@ -15,6 +15,8 @@ const genHTML = require('./src/genHTML');
 //teamMembers
 let teamArray = [];
 
+//TO DO: Add a validation for email - must include '@' symbol
+
 //there MUST be a Manager before any other employee's can be added
 function init() {
     inquirer.prompt([

@@ -6,7 +6,7 @@ test('Check if we can get constructor input for the manager object', () => {
     expect(manager.name).toBe('Josh');
     expect(manager.id).toBe('123456');
     expect(manager.email).toBe('josh@gmail.com');
-    expect(manager.github).toBe('678');
+    expect(manager.officeNumber).toBe('678');
 });
 
 //Running Test for each method from the manager Class Constructor
@@ -17,9 +17,9 @@ test('Check to see if we can retrieve the ID from getId Method', () => {
     expect(manager.getID()).toBe('123456');
 })
 test('Check to see if we can retrieve the email from getEmail Method', () => {
-    expect(manager.getEmail()).toBe('josh@gamil.com');
+    expect(manager.getEmail()).toBe('josh@gmail.com');
 })
-test('Check to see if we can retrieve the github Username from getGitHub Method', () => {
+test('Check to see if we can retrieve the office number', () => {
     expect(manager.getOfficeNumber()).toBe('678');
 })
 test('Check to see if we can retrieve the role from getRole Method', () => {

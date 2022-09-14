@@ -16,7 +16,7 @@ test('Check to see if we can retrieve the ID from getId Method', () => {
     expect(employee.getID()).toBe('123456');
 })
 test('Check to see if we can retrieve the email from getEmail Method', () => {
-    expect(employee.getEmail()).toBe('josh@gamil.com');
+    expect(employee.getEmail()).toBe('josh@gmail.com');
 })
 test('Check to see if we can retrieve the role from getRole Method', () => {
     expect(employee.getRole()).toBe('Employee');
