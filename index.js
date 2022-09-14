@@ -2,9 +2,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 //Lib Team Members
+const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+
 
 let teamArray = [];
 
