@@ -96,5 +96,36 @@ function addEngineer() {
         teamArray.push(engineer);
         //Once the Engineer info is entered the team needs to be built with Engineers/Interns
         teamMenu();
-    })
+    });
 }
+
+function addIntern() {
+    inquirer.promt([
+        {
+            type: 'input',
+            name: 'name',
+            message: "Please enter intern's name:"
+        },
+        {
+            type: 'input',
+            name: 'employeeID',
+            message: 'What is their employee ID:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is their email address:'
+        },
+        {
+            type: 'list',
+            name: 'school',
+            message: 'What is school are they attending:'
+        }
+    ]).then(answers => {
+        const intern = new Intern(answers.name, answers.employeeID, answers.email, answers.school)
+        teamArray.push(intern);
+        //Once the Engineer info is entered the team needs to be built with Engineers/Interns
+        teamMenu();
+    });
+}
+
