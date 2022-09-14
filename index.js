@@ -24,7 +24,7 @@ function init() {
         },
         {
             type: 'input',
-            name: 'employee ID',
+            name: 'employeeID',
             message: 'What is your employee ID:'
         },
         {
@@ -34,13 +34,13 @@ function init() {
         },
         {
             type: 'list',
-            name: 'role',
+            name: 'officeNumber',
             message: 'What is your office number:'
         }
     ]).then(answers => {
-        const manager = new Manager(answers.name, email, phone)
+        const manager = new Manager(answers.name, answers.employeeID, answers.email, answers.officeNumber)
         teamArray.push(manager);
-        //Once the Manager info is enter the team needs to be built with Engineers/Interns
+        //Once the Manager info is entered the team needs to be built with Engineers/Interns
         teamMenu();
     })
 };
@@ -55,7 +55,7 @@ function teamMenu() {
             choices: ['Add Engineer', 'Add Intern', 'My Team is Complete!']
         }
     ]).then(answers => {
-        switch(answers.menu){
+        switch (answers.menu) {
             case "Add Engineer":
                 addEngineer();
                 break;
@@ -67,3 +67,34 @@ function teamMenu() {
         }
     });
 };
+
+//Functions to addEnginers & addInterns
+function addEngineer() {
+    inquirer.promt([
+        {
+            type: 'input',
+            name: 'name',
+            message: "Please enter engineer's name:"
+        },
+        {
+            type: 'input',
+            name: 'employeeID',
+            message: 'What is their employee ID:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is their email address:'
+        },
+        {
+            type: 'list',
+            name: 'githubUsername',
+            message: 'What is their Github username:'
+        }
+    ]).then(answers => {
+        const engineer = new Engineer(answers.name, answers.employeeID, answers.email, answers.githubUsername)
+        teamArray.push(engineer);
+        //Once the Engineer info is entered the team needs to be built with Engineers/Interns
+        teamMenu();
+    })
+}
