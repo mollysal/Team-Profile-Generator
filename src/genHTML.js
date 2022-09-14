@@ -9,7 +9,7 @@ const createTeam = (team) => {
         let managerHTML = `
         <!-- Manager Card -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4 shadow border-info">
                     <div class="card-header">Manager</div>
                     <div class="card-body">
                         <h5 class="card-title">${manager.name}</h5>
@@ -31,7 +31,7 @@ const createTeam = (team) => {
         let engineerHTML = `
         <!-- Engineering Card -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4 shadow border-info">
                     <div class="card-header">Engineer</div>
                     <div class="card-body">
                         <h5 class="card-title">${engineer.name}</h5>
@@ -53,7 +53,7 @@ const createTeam = (team) => {
         let internHTML = `
         <!-- Intern Card -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4 shadow border-info">
                     <div class="card-header">Engineer</div>
                     <div class="card-body">
                         <h5 class="card-title">${intern.name}</h5>
