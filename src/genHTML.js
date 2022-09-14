@@ -106,9 +106,9 @@ module.exports = team => {
 
 <body>
     <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid bg-info">
         <div class="container">
-            <h1 class="display-4">Team Profiles</h1>
+            <h1 class="display-4 font-weight-bolder text-light">Team Profiles</h1>
         </div>
     </div>
     <!-- Cards -->
