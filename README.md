@@ -59,3 +59,4 @@ All tests were passed:
 ![passed tests](./images/Passed%20Tests.png)
 
 ## Video
+![Gif Example](./images/Team-Profile-Generator.gif)
