@@ -9,6 +9,7 @@ const Intern = require('./lib/Intern');
 //HTML Site Creation 
 const createSite = require('./src/genHTML');
 const { choices } = require('yargs');
+const genHTML = require('./src/genHTML');
 
 
 //teamMembers
@@ -129,3 +130,15 @@ function addIntern() {
     });
 }
 
+//Once the team is complete createTeam function needs to be run
+function createTeam() {
+    fs.writeFile('./dist/index.html', genHTML(teamArray), (err) => {
+        if (err)
+        console.log(err);
+        else {
+            console.log("file has been created");
+        }
+    });
+}
+
+init();
