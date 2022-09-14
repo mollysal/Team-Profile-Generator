@@ -45,7 +45,7 @@ const createTeam = (team) => {
             </div>
         `;
         //Push Engineer info from terminal into the card
-        results.push(engineer);
+        results.push(engineerHTML);
     }
 //Generate Intern & add intern Card
     const createIntern = intern => {
@@ -67,7 +67,7 @@ const createTeam = (team) => {
             </div>
         `;
         //Push Intern info from terminal into the card
-        results.push(intern);
+        results.push(internHTML);
     }
 
 //Need to loop through every member of the team until they all have a card

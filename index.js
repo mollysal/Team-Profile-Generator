@@ -34,7 +34,7 @@ function init() {
             message: 'What is your email address:'
         },
         {
-            type: 'list',
+            type: 'input',
             name: 'officeNumber',
             message: 'What is your office number:'
         }
@@ -71,7 +71,7 @@ function teamMenu() {
 
 //Functions to addEnginers & addInterns
 function addEngineer() {
-    inquirer.promt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'name',
@@ -88,7 +88,7 @@ function addEngineer() {
             message: 'What is their email address:'
         },
         {
-            type: 'list',
+            type: 'input',
             name: 'githubUsername',
             message: 'What is their Github username:'
         }
@@ -101,7 +101,7 @@ function addEngineer() {
 }
 
 function addIntern() {
-    inquirer.promt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'name',
@@ -118,7 +118,7 @@ function addIntern() {
             message: 'What is their email address:'
         },
         {
-            type: 'list',
+            type: 'input',
             name: 'school',
             message: 'What is school are they attending:'
         }
